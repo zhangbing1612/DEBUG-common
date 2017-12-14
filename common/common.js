@@ -58,7 +58,7 @@ module.exports = function setup(env) {
     var hash = 0, i;
 
     for (i in namespace) {
-      hash  = ((hash << 5) - hash) + namespace.charCodeAt(i);
+      hash  = ((hash << 5) - hash) + namespace.charCodeAt(i);//charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数
       hash |= 0; // Convert to 32bit integer
     }
 
